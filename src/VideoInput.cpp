@@ -217,7 +217,7 @@ QStringList VideoInput::list_device_resolutions(int index)
     list = list_device_resolutions_quicktime(index, silent);
 #endif
 #ifdef Q_OS_LINUX
-    list = list_device_resolutions_v4l2(index, silent);
+    // list = list_device_resolutions_v4l2(index, silent);
 #endif
 
     return list;

@@ -27,7 +27,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #ifndef __VIDEOINPUT_HPP__
 #define __VIDEOINPUT_HPP__
-
+// #include <qt5/QtCore/QThread>
+// #include <qt5/QtCore/QStringList>
 #include <QThread>
 #include <QStringList>
 
