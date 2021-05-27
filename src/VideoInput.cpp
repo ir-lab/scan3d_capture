@@ -94,7 +94,9 @@ void VideoInput::run()
         if (frame)
         {   //ok
             error = 0;
-            emit new_image(cv::Mat(frame));
+            cv::Mat frame_ = cv::cvarrToMat(frame);
+            emit new_image(frame_);
+            // emit new_image(cv::Mat(frame));
         }
         else
         {   //error

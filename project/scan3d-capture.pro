@@ -14,6 +14,11 @@ win32:CV_VER = 2411
 macx:OPENCV_DIR = "/usr/local"
 macx:OPENCV_LIB_DIR = $$OPENCV_DIR/lib
 
+
+# Ubuntu 18.04
+unix:OPENCV_DIR = "/home/local/ASURITE/sdsonawa/Documents/opencv3.2_install"
+unix:OPENCV_LIB_DIR = $$OPENCV_DIR/lib
+
 #CONFIG += USE_COGNEX
 
 ##########################################################################
@@ -32,7 +37,7 @@ NAME = scan3d-capture
 CONFIG += qt c++11
 QT += opengl
 
-CV_LIB_NAMES = core imgproc highgui calib3d features2d flann
+CV_LIB_NAMES = core imgproc imgcodecs videoio highgui calib3d features2d flann
 
 #cognex
 USE_COGNEX {
