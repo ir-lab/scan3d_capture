@@ -34,7 +34,7 @@ ASSETSDIR = $$BASEDIR/assets
 
 NAME = scan3d-capture
 
-CONFIG += qt c++11
+CONFIG += qt c++17
 QT += opengl
 
 CV_LIB_NAMES = core imgproc imgcodecs videoio highgui calib3d features2d flann
