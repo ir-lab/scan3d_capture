@@ -1,31 +1,35 @@
-3D SCANNING SOFTWARE
+# 3D SCANNING SOFTWARE
 
+* Make sure to install opencv3.2 
+
+
+## Old documentation
 This software implements the calibration method described in "Simple, Accurate, and Robust 
 Projector-Camera Calibration" by Daniel Moreno and Gabriel Taubin in 3DimPVT 2012(*). 
 
 It extends the original software by including projection and capture of gray code patterns, 
 and a simple triangulation feauture to generate oriented color pointclouds.
 
-(*) http://dx.doi.org/10.1109/3DIMPVT.2012.77
+* http://dx.doi.org/10.1109/3DIMPVT.2012.77
 
 
---- LICENSE ---
+## --- LICENSE ---
 
 If you download the software we will assume that you have read and agreed to the terms of
 the Licence Agreement
 
 
---- COMPILATION ---
+## --- COMPILATION ---
 
 See INSTALL.txt
 
 
---- SAMPLE DATA SET ---
+## --- SAMPLE DATA SET ---
 
 For testing purposes download the sample data from the project website
 
 
---- DISABLE CAMERA AUTO-PARAMETERS
+## --- DISABLE CAMERA AUTO-PARAMETERS
 
 It is required that the camera in use has fixed parameters. All the auto-settings (auto-focus,
 auto-exposure, auto-gain, auto-white-balance) must be disabled. How to adjust these settings
