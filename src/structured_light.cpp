@@ -30,7 +30,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <iostream>
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
-
+#include <opencv2/calib3d.hpp>
 namespace sl
 {
     const float PIXEL_UNCERTAIN = std::numeric_limits<float>::quiet_NaN();
@@ -371,7 +371,8 @@ cv::Mat sl::get_gray_image(const std::string & filename)
     {
         //gray scale
         cv::Mat gray_image;
-        cvtColor(rgb_image, gray_image, CV_BGR2GRAY);
+        // cvtColor(rgb_image, gray_image, CV_BGR2GRAY);
+        cvtColor(rgb_image, gray_image, cv::COLOR_BGR2GRAY);
         return gray_image;
     }
     return cv::Mat();

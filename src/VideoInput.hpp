@@ -32,10 +32,12 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <QThread>
 #include <QStringList>
 
-#include <opencv2/core/core.hpp>
+#include <opencv2/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgcodecs/imgcodecs.hpp>
-#include <opencv2/videoio/videoio.hpp>
+// #include <opencv2/videoio/videoio.hpp>
+#include <opencv2/videoio.hpp>
+
 
 class VideoInput : public QThread
 {
@@ -80,7 +82,8 @@ private:
 
 private:
     int _camera_index;
-    CvCapture * _video_capture;
+    cv::VideoCapture * _video_capture;
+    // CvCapture * _video_capture;
     volatile bool _init;
     volatile bool _stop;
 };

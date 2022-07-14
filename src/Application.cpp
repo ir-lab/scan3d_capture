@@ -309,7 +309,8 @@ const cv::Mat Application::get_image(unsigned level, unsigned n, Role role) cons
         if (role==GrayImageRole)
         {
             cv::Mat gray_image;
-            cvtColor(rgb_image, gray_image, CV_BGR2GRAY);
+            cvtColor(rgb_image, gray_image, cv::COLOR_BGR2GRAY);
+            // cvtColor(rgb_image, gray_image, CV_BGR2GRAY);
             return gray_image;
         }
     }
@@ -458,7 +459,8 @@ bool Application::extract_chessboard_corners(void)
             if (cam_corners.size())
             {
                 cv::cornerSubPix(gray_image, cam_corners, cv::Size(11, 11), cv::Size(-1, -1), 
-                                    cv::TermCriteria(CV_TERMCRIT_EPS + CV_TERMCRIT_ITER, 30, 0.1));
+                                    cv::TermCriteria(cv::TermCriteria::EPS + cv::TermCriteria::MAX_ITER, 30, 0.1));
+                                    // cv::TermCriteria(CV_TERMCRIT_EPS + CV_TERMCRIT_ITER, 30, 0.1));
             }
         }
 
@@ -847,7 +849,8 @@ void Application::calibrate(void)
                         //out_pattern = pattern;
                     }
                 }
-                cv::Mat H = cv::findHomography(img_points, proj_points, CV_RANSAC);
+                cv::Mat H = cv::findHomography(img_points, proj_points, cv::RANSAC);
+                // cv::Mat H = cv::findHomography(img_points, proj_points, CV_RANSAC);
                 //std::cout << " H:\n" << H << std::endl;
                 cv::Point3d Q = cv::Point3d(cv::Mat(H*cv::Mat(cv::Point3d(p.x, p.y, 1.0))));
                 q = cv::Point2f(Q.x/Q.z, Q.y/Q.z);

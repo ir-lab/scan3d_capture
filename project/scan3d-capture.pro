@@ -16,7 +16,7 @@ macx:OPENCV_LIB_DIR = $$OPENCV_DIR/lib
 
 
 # Ubuntu 18.04
-unix:OPENCV_DIR = "/home/local/ASURITE/sdsonawa/Documents/opencv3.2_install"
+unix:OPENCV_DIR = "/home/slocal/Documents/opencv3.2_install"
 unix:OPENCV_LIB_DIR = $$OPENCV_DIR/lib
 
 #CONFIG += USE_COGNEX
@@ -91,6 +91,6 @@ else {
 }
 
 LIBS += -L$$OPENCV_LIB_DIR $$CV_LIBS
-INCLUDEPATH += $$SOURCEDIR $$UI_DIR $$OPENCV_DIR/include
+INCLUDEPATH += $$SOURCEDIR $$UI_DIR $$OPENCV_DIR/include/opencv4/
 
 include($${NAME}.pri)
