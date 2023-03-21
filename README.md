@@ -1,7 +1,12 @@
-# 3D SCANNING SOFTWARE
+# 3D SCANNING SOFTWARE (Updated)
+In order to make it work with Ubuntu 20.04 LTS, few tweaks to the software were made. This software is tested on
+* Opencv3.2 or above 
+* QMake version 3.1
+* Qt version 5.12.8
 
-* Make sure to install opencv3.2 
+Installation instruction are available at [INSTALL.md](./INSTALL.md). Detailed information about the calibration can be found here: http://mesh.brown.edu/desktop3dscan/ch3-calib.html
 
+Below is the old documentation by author.
 
 ## Old documentation
 This software implements the calibration method described in "Simple, Accurate, and Robust 
